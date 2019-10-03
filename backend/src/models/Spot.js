@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 
 const SpotSchema = new mongoose.Schema({
+    //Define cada tipo de arquivo
     thumbnail: String,
     company: String,
     price: Number,
@@ -15,6 +16,8 @@ const SpotSchema = new mongoose.Schema({
     },
 });
 
+
+    //faz com que a imagem seja retornada para o usuário no dashboard
 SpotSchema.virtual('thumbnail_url').get(function(){
     return `http://localhost:3333/files/${this.thumbnail}`
 })

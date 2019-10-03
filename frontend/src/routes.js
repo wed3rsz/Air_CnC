@@ -18,3 +18,7 @@ export default function Routes(){
 
     );
 }
+
+
+
+// Rotas setadas para cada url digitada, buscando novas instancias do react-router-dom, como BrowserRouter, Route e Switch

@@ -1,5 +1,7 @@
 const User = require('../models/User');
+//Insere o model User
 const Spot = require('../models/Spot');
+//Insere o model Spot
 
 
 
@@ -12,9 +14,9 @@ module.exports = {
         return res.json(spots);
     },
 
-
-
-
+// req.query = Acessar query params (para filtros)
+// req.params = Acessar route params (para edição, delete)
+// req.body = Acessar corpo da requisição (para criação, edição)
 
     async store(req,res){
         const { filename } = req.file;
@@ -25,6 +27,7 @@ module.exports = {
         const user = await User.findById(user_id);
 
         if (!user) {
+            //Retorna o erro 400 informando que o usuário não existe
             return res.status(400).json({ error: 'User does not exists' });
         }
 

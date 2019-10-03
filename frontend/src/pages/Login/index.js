@@ -7,6 +7,7 @@ export default function Login({ history }) {
 
     async function handleSubmit(event) {
         event.preventDefault();
+        // pede para que a prevenção de recarregar a página
 
 
         const response = await api.post('/sessions', {

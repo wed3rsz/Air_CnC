@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+//useState para setar state de forma mais dinamica
 import { Link } from 'react-router-dom';
 import api from '../../services/api';
 
@@ -33,8 +34,9 @@ export default function Dashboard() {
 
             <Link to="/New">
                 <button className="btn">Cadastrar novo spot</button>
-            
             </Link>
         </>
     )
 }
+
+// função map necessita de uma chamada de key com uma solicitação de algum argumento unico na proxima instancia

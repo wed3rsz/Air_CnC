@@ -9,7 +9,6 @@ function App() {
   return (
     <div className="container">
       <img src={logo} alt="AirCnc"/>
-
       <div className="content">
         <Routes />
       </div>

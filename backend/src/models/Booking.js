@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+//Insere o mongoose para inserção no banco de dados
 
 const BookingSchema = new mongoose.Schema({
     date: String,
@@ -6,10 +7,12 @@ const BookingSchema = new mongoose.Schema({
     user: {
         type:mongoose.Schema.Types.ObjectId,
         ref: 'User',
+        //Faz um retorno referente ao usuário
     },
     spot: {
         type:mongoose.Schema.Types.ObjectId,
         ref: 'Spot',
+        //Faz um retorno referente ao spot
     }
 });
 
